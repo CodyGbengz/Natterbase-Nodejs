@@ -37,6 +37,7 @@ router.post('/login', (req, res) => {
     })
 });
 
+// fetch countries endpoint
 router.get('/countries', auth, (req, res) => {
     return res.status(200).json({
         status: 'Success',
@@ -44,6 +45,7 @@ router.get('/countries', auth, (req, res) => {
     }) 
 });
 
+// Add country endpoint
 router.put('/countries/:country', auth, (req, res) => {
     const { country } = req.params;
     countries = [country, ...countries];
@@ -53,9 +55,10 @@ router.put('/countries/:country', auth, (req, res) => {
     })
 })
 
+// Delete country endpoint
 router.delete('/countries/:country', auth, (req, res) =>{
     const { country } = req.params;
-    
+
     const index = countries.indexOf(country);
     if (index > -1) {
         countries.splice(index, 1);

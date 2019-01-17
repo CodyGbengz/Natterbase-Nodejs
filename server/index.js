@@ -12,5 +12,5 @@ const port = process.env.PORT || 8080;
 
 app.use(routes);
 
-app.get('*', (req, res) => {res.send('here')});
-app.listen(port);
+app.get('*', (req, res) => { res.send('Let go!')});
+app.listen(port, () => console.log('we are live'));
