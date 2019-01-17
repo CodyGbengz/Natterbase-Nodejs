@@ -4,7 +4,8 @@
   "description": "A short nodejs task",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon --exec babel-node server/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,19 @@
   "bugs": {
     "url": "https://github.com/WillyWunderdog/Natterbase-Nodejs/issues"
   },
-  "homepage": "https://github.com/WillyWunderdog/Natterbase-Nodejs#readme"
+  "homepage": "https://github.com/WillyWunderdog/Natterbase-Nodejs#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
 }
