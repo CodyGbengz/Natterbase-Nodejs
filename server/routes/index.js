@@ -53,5 +53,17 @@ router.put('/countries/:country', auth, (req, res) => {
     })
 })
 
+router.delete('/countries/:country', auth, (req, res) =>{
+    const { country } = req.params;
+    
+    const index = countries.indexOf(country);
+    if (index > -1) {
+        countries.splice(index, 1);
+    }
+    return res.status(200).json({
+        status: 'Success',
+        countries
+    })
+})
 export default router;
 
