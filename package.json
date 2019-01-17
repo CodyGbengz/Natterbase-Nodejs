@@ -1,0 +1,22 @@
+{
+  "name": "natterbase-nodejs",
+  "version": "1.0.0",
+  "description": "A short nodejs task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WillyWunderdog/Natterbase-Nodejs.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Gbenga Ode",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WillyWunderdog/Natterbase-Nodejs/issues"
+  },
+  "homepage": "https://github.com/WillyWunderdog/Natterbase-Nodejs#readme"
+}
