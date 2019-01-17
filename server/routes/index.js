@@ -19,8 +19,7 @@ router.post('/login', (req, res) => {
                 },
                 'secret',
                 { expiresIn: 86400 }
-            );
-
+            )
             return res.status(200).json({
                 status: 'Success',
                 message: 'Login successful',
@@ -36,15 +35,22 @@ router.post('/login', (req, res) => {
         status: 'Fail',
         message: 'Invalid username'
     })
-
 });
 
 router.get('/countries', auth, (req, res) => {
     return res.status(200).json({
         status: 'Success',
         countries
+    }) 
+});
+
+router.put('/countries/:country', auth, (req, res) => {
+    const { country } = req.params;
+    countries = [country, ...countries];
+    return res.status(201).json({
+        status: 'Success',
+        countries
     })
-    
 })
 
 export default router;
